@@ -1,0 +1,544 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "rotary rotary"
+    "iphone iphone"
+    "keyboard games"
+    "passes passes"
+    "muchbetter icloud "
+    "twitter icloud"
+    "experience experience"
+    "vision vision"
+  }
+
+/* md */
+@media screen and (min-width:992px){
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "rotary rotary"
+        "iphone iphone"
+        "keyboard games"
+        "passes passes"
+        "muchbetter icloud "
+        "twitter icloud "
+        "experience experience"
+        "vision vision"
+      }
+      
+}
+@media (max-width: 991px) {
+    .experience {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+/* lg */
+@media screen and (min-width:1024px){
+    
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 4fr 4fr 4fr 2fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+              "iphone iphone iphone iphone rotary rotary rotary rotary"
+              "keyboard keyboard passes passes passes passes icloud icloud"
+              "games games muchbetter muchbetter muchbetter muchbetter icloud icloud"
+              "twitter twitter experience experience vision vision vision vision";
+          }
+}
+/* xl */
+@media screen and (min-width:1280px){
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 4fr 4fr 4fr 2fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "iphone iphone iphone iphone rotary rotary rotary rotary"
+          "keyboard keyboard passes passes passes passes icloud icloud"
+          "games games muchbetter muchbetter muchbetter muchbetter icloud icloud"
+          "twitter twitter experience experience vision vision vision vision";
+      }
+}
+
+/* xxl */
+@media screen and (min-width:1536px){
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 4fr 4fr 4fr 2fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "iphone iphone iphone iphone rotary rotary rotary rotary"
+          "keyboard keyboard passes passes passes passes icloud icloud"
+          "games games muchbetter muchbetter muchbetter muchbetter icloud icloud"
+          "twitter twitter experience experience vision vision vision vision";
+      }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+}
+a {
+  color: #27b9c2;
+}
+span {
+  font-family: Montserrat, sans-serif;
+  color: #9fa3a7;
+  font-size: 0.8rem;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.iphone {
+  grid-area: iphone;
+  justify-content: space-around;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  .info {
+    width: 32%;
+    color: #333;
+    p {
+      color: #9fa3a7;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    h3 {
+      margin: 10px 0 20px;
+      font-size: 1.3rem;
+    }
+  }
+  img {
+    max-width: 100%;
+    width: 249px;
+    align-self: flex-end;
+    margin-top: 40px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+.rotary {
+  grid-area: rotary;
+  background-color: #f7f8f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    width: 50%;
+    font-size: 3rem;
+    margin: 0.6em 0;
+    color: #333;
+  }
+}
+
+.keyboard {
+  grid-area: keyboard;
+  background-color: #f05638;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f05638;
+  color: #fffbfb;
+  text-align: center;
+  display: flex;
+  img {
+    width: 320px;
+  }
+  h3 {
+    width: 60%;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.6em 0;
+  }
+  a {
+    color: #ffc80a;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+  }
+}
+
+.passes {
+  grid-area: passes;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 68px;
+  padding-right: 4%;
+  padding-left: 4%;
+  .one {
+    display: flex;
+    width: 50%;
+    max-width: 180px;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    h3 {
+      margin-bottom: auto;
+      margin-top: 10px;
+      line-height: 32px;
+      font-weight: 400;
+      font-size: 1.4rem;
+    }
+    img {
+      position: relative;
+      width: 250%;
+      left: -287px;
+    }
+  }
+  .two {
+    width: 40%;
+    p {
+      color: #9fa3a7;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.4px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+.icloud {
+  grid-area: icloud;
+  display: flex;
+  padding: 30px 5% 70px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #8f76bc;
+  text-align: center;
+  color:#fff;
+  overflow: hidden;
+  .circle{
+    display: flex;
+    width: 373px;
+    height: 373px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #8166b0;
+    .text{
+        i{
+            color: #ffc80a;
+        }
+        padding: 2px 13px 1px 30px;
+        border-radius: 60px;
+        background-color: rgb(255 255 255 / 8%);
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 2.4px;
+        
+    }
+    img{
+        width: 240px;
+        position: relative;
+        left: -8px;
+        margin-top: 20px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    .meet{
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+   
+  }
+  h2{
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #fff;
+    font-weight: bold;
+}
+p{
+    width: 80%;
+}
+a.btn{
+    margin-top: 30px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    background-color: #ffc80a;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+
+}
+}
+.games {
+    grid-area: games;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f8f9;
+    img{
+        width: 250px;
+        position: relative;
+        left: -7%;
+    }
+    h3{
+        width: 50%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-weight: 400;
+        text-align: center;
+        font-size: 1.4rem;
+        color: #333;
+    }
+    a{
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+    }
+  }
+  
+
+.muchbetter {
+  grid-area: muchbetter;
+  background-image: url(./img/5bc2f42d5a5ed97dab707e7e_UX.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  display: flex;
+  padding-top: 30px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #93b6b7;
+  background-size: 80%;
+  .best{
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color: #fa684f;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+  h3{
+    display: block;
+    max-width: 280px;
+    margin: auto;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: bold;
+  }
+  img{
+    position: relative;
+    left:-7%;
+    width: 90%;
+  }
+}
+
+
+.twitter {
+  grid-area: twitter;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  background-color: #38d5f4;
+  .twit-circal{
+    display: flex;
+    width: 240px;
+    height: 240px;
+    padding: 0 34px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #35cfed;
+    text-align: center;
+    img{
+        width: 43px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    h3{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-family: Arvo, sans-serif;
+        font-size: 22px;
+        line-height: 32px;
+        font-weight: 400;
+    }
+  }
+}
+
+.experience {
+  grid-area: experience;
+  background-color: #f7f8f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .pop{
+    position: static;
+    background-color: #7bc424;
+    color: #fff;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    font-size: 8px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  h3{
+    width: 70%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    line-height: 32px;
+    font-weight: 400;
+    color: #333;
+}
+}
+
+.vision {
+  grid-area: vision;
+  display: flex;
+  padding: 0 5%;
+  justify-content: center;
+
+align-items: center;
+background-color: #2c2c2c;
+color: #fff;
+img{
+    width: 270px;
+    position: relative;
+    left:-15%;
+    vertical-align: middle;
+    display: inline-block;
+}
+h3{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: Arvo, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+    width: 34%;
+}
+}
+
+@media screen and (max-width: 479px) {
+  .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto-fit, minmax(100px, auto));
+      grid-auto-flow: row;
+      grid-template-areas:
+        "rotary"
+        "iphone"
+        "keyboard"
+        "games"
+        "passes"
+        "icloud"
+        "muchbetter"
+        "twitter"
+        "experience"
+        "vision";
+  }
+  .rotary h2 {
+    width: 100%;
+  }
+  .rotary {
+    padding: 3rem 0rem;
+  }
+  .iphone {
+    flex-direction:column;
+    padding: 3rem 0rem 0rem 0rem;
+  }
+  .iphone .info {
+    width: 80%;
+  }
+  .iphone img {
+    align-self: center;
+  }
+  .keyboard {
+    padding: 3rem;
+  }
+  .games{
+    padding: 2rem;
+  }
+  .passes {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .passes .one {
+    width: 100%;
+    max-width: 100%;
+  }
+  .passes {
+    & .one {
+        img {
+            width: 200%;
+            left: -500px;
+            margin: 1rem 0rem;
+        }
+    }
+}
+.passes {
+  .two {
+      width: 100%;
+      line-height: 1.8;
+  }
+}
+}
